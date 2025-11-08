@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pocket Dimension</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" as="image" href="d7ae54c21856878973377c1a907a3c09.jpg" />
+    <link rel="icon" href="logo.jpg" type="image/jpeg" sizes="32x32 192x192" />
+</head>
+
+<body>
+    <!-- Background -->
+    <div class="bg" aria-hidden="true"></div>
+    <div class="scrim" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="wrap">
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+                <div class="brand">
+                    <img class="logo" src="logo.jpg" alt="Sunflower logo" />
+                    <h1>Pocket Dimension</h1>
+                </div>
+                <div class="tabs" data-collapsible>
+                    <a href="#hero">Home</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#chat">Chats</a>
+                    <a href="#videos">Videos</a>
+                    <a href="#diary">Diary</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero (intro placeholder) -->
+        <section id="hero" class="card hero">
+            <div class="hero-inner">
+                <h2>Happy Birthday to the Best i've ever known.</h2>
+                <p class="muted">I know it's not a lot but I had to rack my smol brain for everything.<br>I hope you
+                    like it :D</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#gallery">Explore Memories</a>
+                    <a class="btn ghost" href="#chat">Open Chats</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diary -->
+        <section id="diary" class="card diary">
+            <div class="sec-head">
+                <img class="sec-icon-img" src="e.png" alt="" aria-hidden="true" />
+                <h2>Diary</h2>
+                <span class="chip">here we go</span>
+
+            </div>
+            <div class="content">
+                <div class="story-cta">
+                    <a class="btn primary story-btn" href="our-story.html" target="_blank" rel="noopener">Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diva section (above Gallery) -->
+        <section id="diva" class="card">
+            <div class="sec-head">
+                <img class="sec-icon-img" src="e.png" alt="" aria-hidden="true" />
+                <h2>The Diva herself</h2>
+                <span class="chip">shes so pretty its illegal</span>
+            </div>
+
+
+            <div class="content">
+                <div class="gallery" id="divaGrid" aria-live="polite">
+                    <figure data-full="20241122_135405.jpg"><img src="20241122_135405.jpg" loading="lazy" /></figure>
+                    <figure data-full="20241206_163221.jpg"><img src="20241206_163221.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250312_145145.jpg"><img src="20250312_145145.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250425_153838.jpg"><img src="20250425_153838.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250425_154027.jpg"><img src="20250425_154027.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250604_133946.jpg"><img src="20250604_133946.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250604_134435.jpg"><img src="20250604_134435.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250604_143951.jpg"><img src="20250604_143951.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250702_125730.jpg"><img src="20250702_125730.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250716_153839.jpg"><img src="20250716_153839.jpg" loading="lazy" /></figure>
+                    <figure data-full="20250716_170000.jpg"><img src="20250716_170000.jpg" loading="lazy" /></figure>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Gallery (with date stamps) -->
+        <section id="gallery" class="card">
+            <div class="sec-head">
+                <img class="sec-icon-img" src="e.png" alt="" aria-hidden="true" />
+                <h2>Gallery </h2>
+                <span class="chip">doing this gave me chronic back pain :c</span>
+
+            </div>
+            <div class="content">
+                <div class="gallery" id="galleryGrid" aria-live="polite">
+                    <!-- Items are rendered by JS with date separators -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Chats (already has date separators) -->
+        <section id="chat" class="card">
+            <div class="sec-head">
+                <img class="sec-icon-img" src="e.png" alt="" aria-hidden="true" />
+                <h2>Chats</h2>
+                <span class="chip">i apologise for the delay</span>
+
+            </div>
+            <div class="content chatbox">
+                <div class="chat-header">
+                    <img class="avatar-img" src="IMG-20250830-WA0006.jpg" alt="Friend profile picture" />
+                    <div>
+                        <strong>Sahana</strong>
+                        <div class="muted status">alive (yay)</div>
+                    </div>
+                </div>
+                <div class="msgs" id="msgs" role="log" aria-live="polite"></div>
+                <form class="composer" id="chatForm" autocomplete="off">
+                    <input id="msgInput" type="text" placeholder="Type a message…" aria-label="Message" />
+                    <button id="sendBtn" type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Videos (gallery with date stamps) -->
+        <section id="videos" class="card">
+            <div class="sec-head">
+                <img class="sec-icon-img" src="e.png" alt="" aria-hidden="true" />
+                <h2>Videos</h2>
+                <span class="chip">dont ask me why we look wider in some</span>
+
+            </div>
+            <div class="content">
+                <div class="gallery videos-grid" id="videoGrid" aria-live="polite">
+                    <!-- Items are rendered by JS with date separators -->
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+        <div class="frame">
+            <button class="close" id="lbClose" aria-label="Close">✕</button>
+            <button class="prev" id="lbPrev" aria-label="Previous">❮</button>
+            <div id="lbMediaWrap">
+                <img id="lbImage" alt="Media preview" />
+            </div>
+            <button class="next" id="lbNext" aria-label="Next">❯</button>
+        </div>
+    </div>
+    <!-- Background music (hidden native controls) -->
+    <audio id="bgm" preload="auto" loop src="New_West_-_Those_Eyes_CeeNaija.com_.mp3"></audio>
+
+    <!-- Floating music toggle -->
+    <button id="musicToggle" class="music-toggle" aria-pressed="false" aria-label="Play music">
+        🔈
+    </button>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

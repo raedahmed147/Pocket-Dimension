@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Story</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+  <link rel="preload" as="image" href="bg.jpg" />
+  <style>
+    /* Minimal reuse of palette for this standalone page */
+    :root {
+      --bg-deep: #0d0b10;
+      --text: #f7f4ef;
+      --muted: #cfc9bd;
+      --gold: #e0a82e;
+      --amber: #f2c97d;
+      --violet: #2a2336;
+      --border: #e9d9a9;
+      --shadow: 0 10px 35px rgba(0, 0, 0, .45);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg-deep);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      line-height: 1.7;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url('bg.jpg') center/cover no-repeat;
+      filter: blur(10px) saturate(105%) brightness(80%);
+      transform: scale(1.05);
+      z-index: -2;
+    }
+
+    .scrim {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 8, 14, .65), rgba(10, 8, 14, .85));
+      z-index: -1;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(6px);
+      background: rgba(13, 11, 16, .55);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .logo {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .2)
+    }
+
+    h1 {
+      font-size: 1.15rem;
+      margin: 0
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto 64px;
+      padding: 0 16px
+    }
+
+    .card {
+      background: #2f293d;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 16px;
+      box-shadow: var(--shadow)
+    }
+
+    .hero {
+      padding: 20px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .hero h2 {
+      margin: 0 0 6px
+    }
+
+    .content {
+      padding: 18px
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: .9rem
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2b2206;
+      background: linear-gradient(180deg, var(--amber), var(--gold));
+      padding: 10px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      font-weight: 700
+    }
+
+    article p {
+      margin: 0 0 1rem
+    }
+
+    blockquote {
+      margin: 1rem 0;
+      padding: 10px 12px;
+      border-left: 4px solid var(--gold);
+      background: rgba(255, 255, 255, .06);
+      border-radius: 10px
+    }
+
+    @media(min-width:900px) {
+      .wrap {
+        padding: 16px 20px
+      }
+
+      main {
+        padding: 0 20px
+      }
+    }
+    .music-toggle {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60;
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(0,0,0,.45); color: #fff;
+  display: grid; place-items: center; cursor: pointer;
+  box-shadow: 0 6px 22px rgba(0,0,0,.45); backdrop-filter: blur(6px);
+  font-size: 1.05rem;
+}
+.music-toggle[aria-pressed="true"] {
+  background: linear-gradient(180deg, #f2c97d, #e0a82e);
+  color: #2b2206;
+}
+@media (max-width: 480px) {
+  .music-toggle { right: 12px; bottom: 12px; width: 44px; height: 44px; }
+}
+  </style>
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <header>
+    <div class="wrap">
+      <img class="logo" src="logo.jpg" alt="Logo" />
+      <h1>Pocket Dimension</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="hero">
+        <h2>To you,</h2>
+        <div class="meta">Who means the world to me.</div>
+      </div>
+      <div class="content">
+        <article>
+          <blockquote>Entry 1:<i> "Where We Collide"</i></blockquote>
+          <p>Its not really much of a diary, but something you can call a peace of my mind (because peace = you. get
+            it?? hahahahah. ok anyways).</p>
+          <p>Lets ignore that bad start and actually get serious about this shall we?<br>Oh Sahana, if you only knew how
+            lucky i am to have you in my life. I wanna thank the meteorite that killed the dinosaurs, those dinosaurs
+            that acted as fuel to the very vehicle that drove your mom to the hospital only to give birth to you.<br>
+            I wasnt there but im sure the day youre reading this, is the very day every flower bloomed just to witness
+            you.</p>
+          <p>You know what, Im actually writing all this 3 days prior when the whole "me ignoring you" thing happened.
+            Im pretty sure we wouldve sorted things out before you read this but i still want you to know that i really
+            fucking care about you and no one can replace you in my life. Like woman youve taken the entirety of my
+            headspace 😭.</p>
+
+          <blockquote>Entry 2:<i> "A Promise"</i></blockquote>
+          <p>Im so bad at this 😭 (i forgot the number of things ive fidgeted just while writing this). I need to like
+            lock in and hit you with the most sophisticated english youve ever heard from me<br>
+            <b><i>deep breaths</i></b><br>
+            You know what’s crazy? Its the fact that we started out as two people connected by someone else, and
+            somewhere along the way, you became the person i cherish the most.
+            You're worth every second princess, I can’t even count the number of times you’ve made me laugh on days that
+            didn’t deserve it. You’ve got this quiet way of turning storms into sunsets, and the best part? You do it
+            without realising.
+          </p>
+          <p>You once said that home isn’t always a place. And I get it now lol because when I talk to you, the world
+            feels softer, kinder, and beautiful. You don’t even have to say much; your presence is enough.</p>
+
+          <blockquote>Entry 3:<i> "A Fool's Wish"</i></blockquote>
+          <p>Alright. Im gonna come out with the thing that ive been holding back for so long.<br>
+            Im honestly so scared to show you this. This whole thing was developed based on the idea of the lost chats
+            and i know how much you cherish them. Which is why i wanna face my fears and trust the me that trusts you.
+          </p>
+          <p>I know there were times I hurt you - more times than I’d like to admit. And every single time, you still
+            chose to forgive me. I don’t think you realize how much that means to me. You could’ve walked away, but you
+            didn’t. You stayed, even when I didn’t deserve it.<br>
+            I kept wondering if bringing the chats back would make you smile or make you remember things that still
+            hurt. Since youre gonna read them again, I hope you feel how much I’ve grown since then. I hope you see how
+            hard I’ve tried to become someone you can always trust, someone who learns from his mistakes and never
+            repeats them.</p>
+          <p>You’ve always seen the best in me, even when I didn’t deserve it. And I promise, from now on, I’ll keep
+            giving you reasons why your faith in me wasn’t wasted.</p>
+
+          <blockquote>Entry 4:<i> "For The Days That Feel Heavy"</i></blockquote>
+          <p>Some days just feel too much, don’t they? The air gets thick, the noise too loud, and even breathing feels
+            like effort. I know you’ve been feeling that way lately - the whole “suffocating but holding it together
+            anyway” thing.
+            I wish I could make it lighter for you. Not by fixing it, but by being the calm in the middle of it all.
+            You’ve always been that for me, a place where I can just exist without having to pretend. I want to be that
+            for you too.</p>
+          <p>I know you refuse to show me when youre down but trust me princess I can tell. I can see it in the way your
+            cheek tenses up when you’re trying to fake a smile. The way your eyes, which usually have this spark,
+            suddenly look like they’re searching for air.
+            You’ve got this brave habit of pretending everything’s fine and honestly, I get it. But please know, you
+            don’t have to do that with me. You could sit there and say absolutely nothing, and I’d still know. That’s
+            how connected we’ve become, its like we speak in small silences.</p>
+          <p>And when you do smile, that real one, where your whole face joins in - it’s impossible not to notice. That
+            little head tilt down, the soft glance upward, (Holy fuck 😭) I swear, it’s like time pauses for a second
+            just to watch you. You’ve probably got no idea how much light that tiny gesture carries.</p>
+
+          <blockquote>Entry 5:<i> "You, The Angel Who Chose To Stay"</i></blockquote>
+          <p>You always talk about your insecurities like they define you. But if you could see yourself through my eyes
+            even
+            just once, you’d never doubt your worth again.
+            You’re absolutely stunning, yeah, but not just in the way people mean when they throw that word around.
+            You’re
+            beautiful in the way you listen, how you care, how you feel so deeply that it shows even when you try to
+            hide it.</p>
+          <p>
+            It’s in your laughter, your stubborn kindness, your eyes when they lock on to something you love. That’s the
+            kind of beauty that doesn’t fade you know. It stays, even when the world changes.
+            So if I ever catch you doubting yourself again, just remember that, I’ve seen every version of you - the
+            tired
+            one, the silly one, the quiet one, and they’re all perfect in their own way.</p>
+          <p>Every time I see you smile, it
+            feels like the universe lets out a sigh of relief. I don’t flirt with you to get your attention, I do it
+            because watching you giggle and smile? That’s pure bliss.
+            If I could bottle up the sound of your laugh, I’d keep it as an antidote for bad days.</p>
+          <blockquote>Entry 6:<i> "The Promise, Again"</i></blockquote>
+          <p>Here’s the deal -I can’t fix everything you go through (I’ll try to ofcourse). But I’ll always be there to
+            remind you of who you are when you start to forget.
+            I’ll be the one who makes you laugh when you least expect it, the one who notices the little things others
+            miss, the one who never lets your light dim quietly.
+            Because you’re not just “someone special” to me, Sahana. You’re that rare kind of person who makes life feel
+            like it’s finally in color.</p>
+
+          <p>
+            When you’re tired, I feel it too. When you’re sad, I wish I could take that weight and carry it for you,
+            even if it’s just for a while. And when you smile, it’s like the universe got something right for once.
+            Nonetheless, no matter what happens, please keep being you - the real, unfiltered, beautiful you.
+            I’ll always be here, cheering for her.</p>
+            <p>So yeah, maybe this isn’t a grand confession or some over the top letter.<br>
+            It’s just me saying: You matter. You always have. And I’m not going anywhere.</p>
+        </article>
+        <a href="index.html#diary" class="back">Back to Home</a>
+      </div>
+    </section>
+  </main>
+  <!-- Background music (hidden native controls) -->
+<audio id="bgm" preload="auto" loop src="New_West_-_Those_Eyes_CeeNaija.com_.mp3"></audio>
+
+<!-- Floating music toggle -->
+<button id="musicToggle" class="music-toggle" aria-pressed="false" aria-label="Play music">🔈</button>
+</body>
+
+<script>
+// ===== Background music with user-gesture start (same behavior as index) =====
+const bgm = document.getElementById('bgm');
+const musicToggle = document.getElementById('musicToggle');
+// Use a different storage key so pages don't fight each other, or reuse the same if you want shared state.
+const MUSIC_KEY = 'pd-music-on-story';
+
+// Restore last state for this tab (default on = true)
+let wantsMusic = sessionStorage.getItem(MUSIC_KEY);
+wantsMusic = wantsMusic === null ? 'true' : wantsMusic;
+
+function updateToggleUI(isPlaying) {
+  musicToggle.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+  musicToggle.textContent = isPlaying ? '🔊' : '🔈';
+  musicToggle.setAttribute('aria-label', isPlaying ? 'Pause music' : 'Play music');
+}
+
+async function ensurePlay() {
+  try {
+    await bgm.play();
+    updateToggleUI(true);
+    sessionStorage.setItem(MUSIC_KEY, 'true');
+  } catch (e) {
+    // Play blocked until a gesture; reflect off state
+    updateToggleUI(false);
+  }
+}
+
+function pauseMusic() {
+  bgm.pause();
+  updateToggleUI(false);
+  sessionStorage.setItem(MUSIC_KEY, 'false');
+}
+
+musicToggle.addEventListener('click', async () => {
+  if (bgm.paused) await ensurePlay();
+  else pauseMusic();
+});
+
+// Start on first user gesture if the user wanted music
+function firstGesture() {
+  document.removeEventListener('click', firstGesture, { capture: true });
+  document.removeEventListener('touchstart', firstGesture, { capture: true });
+  if (wantsMusic === 'true') ensurePlay();
+}
+document.addEventListener('click', firstGesture, { capture: true, once: true });
+document.addEventListener('touchstart', firstGesture, { capture: true, once: true });
+
+// Initialize UI
+updateToggleUI(wantsMusic === 'true' && !bgm.paused);
+</script>
+
+</html>
